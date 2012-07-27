@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  detail: MyString
+  completed: false
+  user_id: 1
+
+two:
+  detail: MyString
+  completed: false
+  user_id: 1

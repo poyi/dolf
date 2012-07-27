@@ -1,0 +1,2 @@
+
+  page.insert_html :bottom, :tasks_list, :partial => "tasks", :object => @task

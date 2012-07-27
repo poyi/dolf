@@ -1,0 +1,7 @@
+<% @tasks.each do |task| %>
+
+<p><%= best_in_place task, :detail %></p>
+<p><%= best_in_place task, :completed, type: :checkbox %></p>
+ <%= link_to "Destroy", task, :remote => true, :confirm => 'Are you sure?', :method => :delete %>
+
+<% end %>
