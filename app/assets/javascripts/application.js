@@ -12,4 +12,10 @@
 
 $(document).ready(function() {
 	$(".best_in_place").best_in_place();
+
+	$(".best_in_place").bind("ajax:success", function(){
+		location.reload();
+	});
+
+	$(".checkbox").find('span').html('<img src="http://ipsumimage.appspot.com/20.jpg"/>');
 });

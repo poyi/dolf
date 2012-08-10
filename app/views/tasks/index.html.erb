@@ -1,7 +1,12 @@
- <h1> Todo List </h1>
+ <div class="row">
+ 	<div class="span6">
+		 <h1> Todo List </h1>
+		<div id="tasks_list"><%= render :partial => 'tasks' %></div>
+		<div id="task_form"><%= render :partial => 'form' %></div>
+	</div>
 
-
-<div id="tasks_list"><%= render :partial => "tasks" %></div>
-<div id="task_form"><%= render :partial => 'form' %></div>
-
-	
+	<div class="span6-last">
+		<h1> Completed List </h1>
+		<div id="completed_list"><%= render :partial => 'completed' %></div>
+	</div>
+</div> <!-- End of container row -->

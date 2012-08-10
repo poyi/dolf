@@ -13,4 +13,10 @@ class Task < ActiveRecord::Base
 		errors.add(:user_id, "User doesn't exist..") unless User.exists?(user_id)
 	end
 
+	before_save :completed_status
+
+  	def completed_status
+    	self.completed ||= 'false'
+  	end
+
 end

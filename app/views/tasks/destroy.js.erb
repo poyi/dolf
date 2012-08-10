@@ -2,4 +2,5 @@ $("#task_errors").hide(300);
 $("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
 $("#flash_notice").show(300);
 $("#tasks_list").html("<%= escape_javascript( render(:partial => "tasks", :locals => {:tasks => @tasks}) ).html_safe %>");
+$("#completed_list").html("<%= escape_javascript( render(:partial => "completed", :locals => {:tasks => @tasks}) ).html_safe %>");
 

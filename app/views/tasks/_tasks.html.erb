@@ -1,10 +1,11 @@
 
 <table>
-<% @tasks.each do |task| %>
+<% @dotasks.each do |task| %>
 
 <tr>
 <td><%= best_in_place task, :detail %></td>
-<td><%= link_to "Destroy", task, :confirm => 'Are you sure?', :method => :delete, :remote => true, :id=>'delete' %></td>
+<td class="checkbox"><%= best_in_place task, :completed, :type => :checkbox, :collection => ["Click to Finish", "Done"] %></td>
+
 </tr>
 
 <% end %>
