@@ -4,6 +4,7 @@
 
 <tr>
 <td><%= best_in_place task, :detail %></td>
+<td><%= best_in_place task, :due, :type => :date %></td>
 <td class="checkbox"><%= best_in_place task, :completed, :type => :checkbox, :collection => ["Click to Finish", "Done"] %></td>
 
 </tr>

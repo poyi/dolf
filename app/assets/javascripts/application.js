@@ -5,6 +5,7 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require jquery.purr
@@ -13,9 +14,9 @@
 $(document).ready(function() {
 	$(".best_in_place").best_in_place();
 
-	$(".best_in_place").bind("ajax:success", function(){
-		location.reload();
-	});
+	// $(".best_in_place").bind("ajax:success", function(){
+	// 	location.reload();
+	// });
 
 	$(".checkbox").find('span').html('<img src="http://ipsumimage.appspot.com/20.jpg"/>');
 });
