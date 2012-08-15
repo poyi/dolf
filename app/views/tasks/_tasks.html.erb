@@ -1,13 +1,14 @@
 
-<table>
-<% @dotasks.each do |task| %>
+<ul class="task-list-section">
+	<% if @dotasks.each do |task| %>
+	<li class="task-list-items">
+		<div class="task-list-check-background"><%= best_in_place task, :completed, :type => :checkbox, :collection => ["Okay", "Done"] %></div>
+		<div class="task-list-detail-background"><%= best_in_place task, :detail, :maximum => 5 %></div>
+		<div class="task-list-date-background"><%= best_in_place task, :due, :type => :date %></div>
+	</li>
+	<% end.empty? %>
+  <div style="position:absolute; z-index: -10; font-size: 16px; margin-left: 30px">You should add some task..</div>
 
-<tr>
-<td><%= best_in_place task, :detail %></td>
-<td><%= best_in_place task, :due, :type => :date %></td>
-<td class="checkbox"><%= best_in_place task, :completed, :type => :checkbox, :collection => ["Click to Finish", "Done"] %></td>
 
-</tr>
-
-<% end %>
-</table>
+	<% end %>
+</ul>

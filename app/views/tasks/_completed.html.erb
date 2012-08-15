@@ -1,11 +1,9 @@
-<ol>
+<ul class="task-list-section">
 <% @completed.each do |task| %>
+	<li class="task-list-items completed-items">
+		<div class="task-list-checked-background"><%= best_in_place task, :completed, :type => :checkbox, :collection => ["false", "Done"] %></div>
 
-
-<li><%= best_in_place task, :completed, :type => :checkbox, :collection => ["Click to Finish", "Done"] %>
-	<p><%= best_in_place task, :detail %></p> 
-	<%= link_to "Destroy", task, :confirm => 'Are you sure?', :method => :delete, :remote => true, :id=>'delete' %>
-</li>
-
+		<div class="task-list-detail-background"><%= best_in_place task, :detail %></p> 
+	</li>
 <% end %>
-</ol>
+</ul>

@@ -1,0 +1,12 @@
+<h2 style="margin-bottom: 20px;">Resend unlock instructions</h2>
+
+<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div>
+  <%= f.email_field :email, :placeholder => "Enter email here" %></div>
+
+  <div><%= f.submit "Resend unlock instructions" %></div>
+<% end %>
+
+<%= render "links" %>

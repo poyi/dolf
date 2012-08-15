@@ -1,6 +1,10 @@
 Dolf::Application.routes.draw do
 
-  resources :tasks
+  resources :tasks do
+    collection do
+    get 'remove_all'
+    end
+  end
 
   get "pages/home"
 

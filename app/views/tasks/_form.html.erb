@@ -1,10 +1,9 @@
-<%= form_for(@task, :remote => true) do |f| %>
+<%= form_for(@task, :html => { :class => "footer-create-input"}, :remote => true) do |f| %>
 
-  <div class="field">
-    <%= f.label :detail %><br />
-    <%= f.text_field :detail %>
+  <div class="field" id="task-create-input">
+    <%= f.text_field :detail, :placeholder => "Enter new tasks here" %>
   </div>
-  <div class="actions">
+  <div class="actions" id="task-create-button">
     <%= f.submit %>
   </div>
 <% end %>

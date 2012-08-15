@@ -14,9 +14,15 @@
 $(document).ready(function() {
 	$(".best_in_place").best_in_place();
 
-	// $(".best_in_place").bind("ajax:success", function(){
-	// 	location.reload();
-	// });
+	$(".best_in_place").bind("ajax:success", function(){
+		location.reload();
+	});
 
-	$(".checkbox").find('span').html('<img src="http://ipsumimage.appspot.com/20.jpg"/>');
+	$("#delete-all-btn").bind("ajax:success", function(){
+		location.reload();
+	});
+
+	$(".task-list-check-background").find('span').html('<img class="checkbox-bk-default" src="/assets/checkbox-bk-default.png" />');
+	$(".task-list-checked-background").find('span').replaceWith('<img class="checkbox-bk-completed" src="/assets/checkbox-bk-completed.png" />');
+	
 });

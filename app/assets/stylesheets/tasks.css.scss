@@ -1,3 +1,133 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+body {
+	font-family: 'Andika', verdana, arial, sans-serif;
+	background: #fffbf6;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0px;
+	z-index: 3;
+}
+
+#bottom-bk-strip {
+	background: #151515;
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	opacity: 0.7;
+	z-index: 2;
+}
+
+.footer-create-input {
+	float: right;
+}
+
+#task-create-input {
+	float: left;
+}
+
+#task-create-button {
+	float: left;
+	margin-left: 20px;
+}
+
+.task-list-section {
+	list-style: none;
+}
+
+.task-list-items {
+	width: 570px;
+	height: 40px;
+	margin-bottom: 10px;
+}
+
+.task-list-items > div{
+	float: left;
+	-moz-box-shadow: 1px 1px 1px #f0f0f0;
+	-webkit-box-shadow: 1px 1px 1px #f0f0f0;
+	box-shadow: 1px 1px 1px #f0f0f0;
+}
+
+.completed-items {
+	opacity: 0.4;
+}
+
+.task-list-detail-background {
+	height: 30px;
+	width: auto;
+	background: #ffffff;
+	border-style:solid solid solid none;
+	border-width: 1px;
+	border-color: #d3d3d3;
+	font-size: 15px;
+	padding: 8px 10px 0 10px;
+}
+
+.task-list-date-background {
+	height: 30px;
+	width: auto;
+	background: #f1f3ef;
+	border-style:solid solid solid none;
+	border-width: 1px;
+	border-color: #d3d3d3;
+	font-size: 15px;
+	padding: 8px 5px 0 5px;
+}
+
+.task-list-check-background {
+	height: 30px;
+	width: auto;
+	background: #ffffff;
+	border-style:solid none solid solid;
+	border-width: 1px;
+	border-color: #d3d3d3;
+	color: #575757;
+	font-size: 15px;
+	padding: 8px 0 0 5px;
+}
+
+.task-list-checked-background {
+	height: 30px;
+	width: auto;
+	background: #ffffff;
+	border-style:solid none solid solid;
+	border-width: 1px;
+	border-color: #d3d3d3;
+	color: #575757;
+	font-size: 15px;
+	padding: 8px 0 0 5px;
+}
+
+.checkbox-bk-default {
+	margin-top: -4px;
+}
+
+.checkbox-bk-completed {
+	margin-top: -4px;
+}
+
+.best_in_place :input {
+	width: auto;
+}
+
+#delete-all-btn {
+	float: left;
+	margin-top: 5px;
+}
+
+#delete-all-btn a{
+	color: #f6f6f6;
+}
+
+#today-date {
+	margin-top: 10px;
+	font-size: 13px;
+	color: #fffbf6;
+}

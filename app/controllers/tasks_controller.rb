@@ -5,9 +5,9 @@ class TasksController < ApplicationController
 
 	def index
 		@tasks = current_user.tasks
-		@dotasks = current_user.tasks.where(:completed => false)
+		@dotasks = current_user.tasks.where(:completed => "false")
 		@task = Task.new
-		@completed = current_user.tasks.where(:completed => true)
+		@completed = current_user.tasks.where(:completed => "true")
 		respond_with @tasks, @task, @completed
 	end
 
@@ -36,29 +36,30 @@ class TasksController < ApplicationController
 	def edit
 		@tasks = current_user.tasks
 		@task = current_user.tasks.find(params[:id])
-		respond_with @task
+		respond_with @task, @tasks
 	end
 
 	def update
 		@tasks = current_user.tasks
 		@task = current_user.tasks.find(params[:id])
 		if @task.update_attributes(params[:task])
-			flash[:notice] = "Task was updated!"
-			respond_with @task 
+			respond_with @task, @tasks
 		else
 			nil
 		end
 	end
 
+	def remove_all
+  		current_user.tasks.where(:completed => "true").delete_all
+  		redirect_to tasks_path
+	end
+
 	def destroy
 		@tasks = current_user.tasks
 		@task = current_user.tasks.find(params[:id])
-		@completed = current_user.tasks.where(:completed => true)
+		@completed = current_user.tasks.where(:completed => "true")
 		@task.destroy
-		flash[:notice] = "Successfully destroyed post."
-		respond_to do |format|
-			format.js
-		end
+		respond_with @task, @tasks, @completed
 	end
 
 end
