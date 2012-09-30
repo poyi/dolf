@@ -7,3 +7,7 @@ What can this app do?
 • Create simple to-do list and check off 
 • Add due dates to each task
 • Delete all completed tasks 
+
+See example app on Heroku:
+
+http://dolf.herokuapp.com/
